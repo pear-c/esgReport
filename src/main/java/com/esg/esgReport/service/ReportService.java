@@ -16,9 +16,9 @@ import java.util.Map;
 
 @Service
 public class ReportService {
-    private static final String DB_URL = "jdbc:postgresql://114.108.146.153:64302/esg";
-    private static final String DB_USER = "esg";
-    private static final String DB_PASSWORD = "Rz3z8FS4W3UL7ty8";
+    private static final String DB_URL = /* DB 커넥션 정보 */
+    private static final String DB_USER = /* DB 커넥션 정보 */
+    private static final String DB_PASSWORD = /* DB 커넥션 정보 */
 
 //    private static final String[] REPORT_FILES = {
 //            "Page01.jrxml", "Page02.jrxml", "Page03.jrxml", "Page04_05.jrxml",
