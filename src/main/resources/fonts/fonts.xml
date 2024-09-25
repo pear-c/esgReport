@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fontFamilies>
+    <fontFamily name="KR_맑은고딕">
+        <normal>fonts/malgun.ttf</normal>
+        <bold>fonts/malgunbd.ttf</bold>
+        <italic>fonts/malgunsl.ttf</italic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+        </exportFonts>
+    </fontFamily>
+</fontFamilies>
