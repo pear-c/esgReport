@@ -20,25 +20,12 @@ public class ReportService {
     private static final String DB_USER = /* DB 커넥션 정보 */
     private static final String DB_PASSWORD = /* DB 커넥션 정보 */
 
-//    private static final String[] REPORT_FILES = {
-//            "Page01.jrxml", "Page02.jrxml", "Page03.jrxml", "Page04_05.jrxml",
-//            "Page06.jrxml", "Page07_08.jrxml", "Page09_17.jrxml", "Page18_32.jrxml",
-//            "Page33_35.jrxml"
-//    };
-//    private static final String[] REPORT_FILES = {
-//            "Self_02.jrxml", "Self_03.jrxml", "Self_04.jrxml",
-//            "Self_05.jrxml", "Self_06.jrxml", "Self_07.jrxml",
-//            "Self_08.jrxml",
-//    };
-
     private final ResourceLoader resourceLoader;
 
-    // ResourceLoader를 생성자 주입받음
     public ReportService(ResourceLoader resourceLoader) {
         this.resourceLoader = resourceLoader;
     }
 
-    // 템플릿 경로를 동적으로 설정하는 메소드
     private String getTemplatePath() {
         Resource resource = resourceLoader.getResource("classpath:templates/");
         try {
@@ -52,18 +39,9 @@ public class ReportService {
         }
     }
 
-//    public void compileReports() throws JRException {
-//        String templatePath = getTemplatePath();
-//
-//        for(String fileName : REPORT_FILES){
-//            JasperCompileManager.compileReportToFile(templatePath + fileName);
-//        }
-//    }
-
     public byte[] generateReport(String coId, Integer revNo, String esgDiv){
         // 데이터베이스 연결
         try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD)){
-//            compileReports();
             
             // 리포트 경로
             String templatePath = getTemplatePath();
